@@ -1,0 +1,30 @@
+div#container {
+  width: 720px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+}
+p#how-to-use {
+  text-align: center;
+  color: gray;
+}
+ul#config {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+ul#config li {
+  display: inline;
+  padding-left: 1em;
+}
+div#graph {
+  margin: 0.5em 10px;
+  width: 700px;
+  height: 450px;
+  border: 1px solid black;
+}
+div#footer{
+  color: darkgray;
+  font-size: 1em;
+}

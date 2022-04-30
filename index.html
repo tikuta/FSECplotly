@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FSECplotly</title>
+  <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>
+  <script src="main.js"></script>
+  <link href="main.css" rel="stylesheet">
+</head>
+
+<body id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+    <div id="container">
+        <h1>FSECplotly</h1>
+        <p id="how-to-use">Drop anywhere to plot Shimadzu HPLC ASCII data (Files are processed locally).</p>
+        <ul id="config">
+            <li>Flowrate [mL/min] <input type="number" value="0.5" step="0.1" id="flowrate"></li>
+            <li>Detector
+                <select name="detector" id="detector" onchange="updateGraph();">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                </select>
+                <select name="channel" id="channel" onchange="updateGraph();">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </li>
+            <li><button onclick="clearGraph();">Clear</button></li>
+        </ul>
+        <div id="graph"></div>
+        <div id="footer">
+            <p>Please report any issues or improvements to <a href="">GitHub</a> in either English or Japanese.</p>
+        </div>
+    </div>
+    <script>initGraph();</script>
+</body>
+</html>
